@@ -37,3 +37,13 @@ git commit -m ‘Мой первый коммит!’
 
 Внутри HEAD — ссылка на служебный файл: *refs/heads/master (или refs/heads/main* в зависимости от названия ветки).   
 Если заглянуть в этот файл, можно увидеть хеш последнего коммита.
+## Статусы и жизненный цикл файлов в Git
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked/comitted;
+
+%% стрелка без текста для примера: 
+  A --> B;
+```
